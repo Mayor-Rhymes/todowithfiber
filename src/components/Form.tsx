@@ -37,7 +37,10 @@ const Form = ({text, link, action, mainaction}: FormInfo) => {
    const [password, setPassword] = useState<string>("")
    const navigate = useNavigate();
 
-   const {setUser} = useUserContext() as UserContextInterface;
+   const {user, setUser} = useUserContext() as UserContextInterface;
+
+
+
 
    const handleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
 
@@ -64,6 +67,7 @@ const Form = ({text, link, action, mainaction}: FormInfo) => {
 
                 const {user, token, message} = response.data
                 setUser({email: user.email, username: user.username, token:token});
+                localStorage.setItem("user", JSON.stringify({email: user.email, username: user.username, token:token}));
                 toast({
 
                     title: message,

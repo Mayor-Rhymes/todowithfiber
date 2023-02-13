@@ -1,7 +1,8 @@
 
 import {createContext, useReducer, useState, SetStateAction, Dispatch, ReactElement} from "react";
 
-const user = localStorage.getItem("user");
+const loggedUser = JSON.parse(localStorage.getItem("user") as string);
+
 
 
 interface Props {
@@ -34,10 +35,8 @@ export const userContext = createContext<UserContextInterface | null>(null);
 const UserContextProvider = ({children}: Props) => {
 
     
-    const [user, setUser] = useState<User | null>(null);
+    const [user, setUser] = useState<User | null>(loggedUser ? {email: loggedUser.email, username: loggedUser.username, token: loggedUser.token}: null);
 
-
-    
     return (
 
         <userContext.Provider value={{ user, setUser }}>
