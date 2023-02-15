@@ -1,7 +1,7 @@
 
 import {createContext, useReducer, useState, SetStateAction, Dispatch, ReactElement} from "react";
 
-const loggedUser = JSON.parse(localStorage.getItem("user") as string);
+const loggedUser = JSON.parse(localStorage.getItem("user"));
 
 
 
