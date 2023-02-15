@@ -26,7 +26,7 @@ const EditTodo = () => {
     
     const getTodo = async () => {
 
-        const response = await Axios.get(`http://localhost:4000/api/v1/todo/${id}`, {
+        const response = await Axios.get(`https://fiberbackendstructure-production.up.railway.app/api/v1/todo/${id}`, {
 
         headers: {
  
@@ -43,7 +43,7 @@ const EditTodo = () => {
 
          if(title || content){
                  
-            const response = await Axios.patch(`http://localhost:4000/api/v1/todo/${id}`, {
+            const response = await Axios.patch(`https://fiberbackendstructure-production.up.railway.app/api/v1/todo/${id}`, {
 
               title,
               content,

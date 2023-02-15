@@ -28,7 +28,7 @@ const TodoItem: FC<Props> = ({todo}) => {
 
     const handleDelete = async () => {
 
-        const response = await Axios.delete(`http://localhost:4000/api/v1/todo/${id}`, {
+        const response = await Axios.delete(`https://fiberbackendstructure-production.up.railway.app/api/v1/todo/${id}`, {
 
         headers: {
  

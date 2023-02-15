@@ -47,7 +47,7 @@ const Form = ({text, link, action, mainaction}: FormInfo) => {
        e.preventDefault();
        if(email && username && password){
 
-           const response = await Axios.post(`http://localhost:4000/api/v1/user/${mainaction.toLowerCase()}`, {
+           const response = await Axios.post(`https://fiberbackendstructure-production.up.railway.app/api/v1/user/${mainaction.toLowerCase()}`, {
 
                  email,
                  username,

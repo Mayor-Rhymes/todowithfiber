@@ -26,7 +26,7 @@ const Home = () => {
    //Todo => Research what is wrong with useQuery
    const {data, isFetched} = useQuery(["todos"], async () => {
 
-    const response = await Axios.get("http://localhost:4000/api/v1/todo", {
+    const response = await Axios.get("https://fiberbackendstructure-production.up.railway.app/api/v1/todo", {
 
        headers: {
 
@@ -44,7 +44,7 @@ const Home = () => {
    // Todo => Refactor the code 
    const getTodos = async () => {
 
-     const response = await Axios.get("http://localhost:4000/api/v1/todo", {
+     const response = await Axios.get("https://fiberbackendstructure-production.up.railway.app/api/v1/todo", {
 
        headers: {
 

@@ -35,7 +35,7 @@ const Create = () => {
         if(title && content){
 
 
-            const response = await Axios.post("http://localhost:4000/api/v1/todo", {
+            const response = await Axios.post("https://fiberbackendstructure-production.up.railway.app/api/v1/todo", {
 
                 title, 
                 content
